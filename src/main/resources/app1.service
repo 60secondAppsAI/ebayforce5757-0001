@@ -1,0 +1,12 @@
+[Unit]
+Description=ebayforce5757
+After=syslog.target
+
+[Service]
+User=root
+Restart=always
+RestartSec=30s
+ExecStart=/usr/bin/java -jar /var/ebayforce5757/ebayforce5757-0.0.1-SNAPSHOT.jar SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
